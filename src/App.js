@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './NavBar'
+const info = [
+  {name: "Home", active: true, link: "#home"},
+  {name:"Services", active: false, link: "#Services", dropDown: ['For entrepreneurs', 'For students', 'For hobbyists']},
+  {name: 'Contact', active: false, link: "#Contact"}
+
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <NavBar data={info} />
     </div>
   );
 }
